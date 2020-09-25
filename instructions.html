@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Friday Games Session</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/instructions-page-style.css">
+</head>
+
+<body>
+    <img src="./assets/images/icon.png" alt="MTN Bénin" onclick="goToIndex()">
+
+    <h1>TECHNOLOGY FRIDAY GAMES SESSION</h1>
+
+    <section id="app">
+        <div id="main-container" class="main-container">
+            <div class="question-container" id="question">
+                <p id="intro-text">
+                    <span class="indication-text">REGLES DU JEU</span> <br /><br />
+                    Le but du jeu est de trouver le plus long mot possible en utilisant les lettres qui ont été tirées, se rapprochant ainsi du principe de l'anagramme. Les diacritiques sont négligées.<br/>Vous disposez de 30 secondes pour saisir votre proposition dans le console de discussion. Les participants qui trouvent le mot le plus long marquent des points si leur mot est correct. Un participant ne marque aucun point si son mot est incorrect ou s'il est plus court que celui d'un autre participant.<br/>
+                    <p>De façon générale, sont admis:
+                        <ul>
+                            <li>Les féminins;</li>
+                            <li>Les pluriels;</li>
+                            <li>Les infinitifs;</li>
+                            <li>Les participes présents et passés;</li>
+                            <li>Le verbes transitifs;</li>
+                            <li>Les adjectifs.</li>
+                        </ul>
+                    </p>
+                    <p>De façon générale, sont refusés:
+                        <ul>
+                            <li>Les abréviations;</li>
+                            <li>Les verbes conjugués;</li>
+                            <li>Les noms propres.</li>
+                        </ul>
+                    </p>
+                    <p>Le dictionnaire de référence du jeu est <em>Larousse</em>.</p>
+                    <p class="indication-text">BON JEU et, HAVE FUN !!!</p>
+                </p>
+            </div>
+            <div id="button-container" class="button-container">
+                <p class="button-next">
+                    <button type="button" onclick="playMotLePlusLong()" id="next">Commencer</button>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/mot-le-plus-long.js"></script>
+</body>
+
+</html>

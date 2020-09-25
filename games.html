@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Friday Games Session</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/games-style.min.css">
+</head>
+
+<body>
+    <img src="./assets/images/icon.png" alt="MTN Bénin" onclick="goToIndex()">
+
+    <h1>TECHNOLOGY FRIDAY GAMES SESSION</h1>
+
+    <section id="app">
+        <div id="main-container" class="main-container">
+            <div class="question-container" id="question">
+                <p id="intro-text">
+                    <span class="indication-text">QUE DU FUN !!!</span> <br /><br />
+                    Vous disposez de plusieurs catégories de jeux; Sélectionnez la catégorie de votre choix
+                    et... HAVE FUN !!!
+                </p>
+            </div>
+            <div id="button-container" class="button-container">
+                <p class="button-next">
+                    <button type="button" onclick="going()" id="next">Continuer</button>
+                </p>
+                <p class="button-reponse">
+                    <button type="button-response" onclick="displayAnswer()" id="answer-button">Reponse</button>
+                </p>
+                <p class="score-container" id="score-container">Score : <span id="score">0</span></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/games.js"></script>
+</body>
+
+</html>

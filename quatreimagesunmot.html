@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Friday Games Session</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/chrono.min.css">
+    <link rel="stylesheet" href="css/quatre-images-un-mot.min.css">
+</head>
+
+<body>
+    <audio id="chrono-sound" src="" loop=true autoplay=true></audio>
+
+    <img id="logo" src="./assets/images/icon.png" alt="MTN Bénin" onclick="goToIndex()">
+
+    <h1>TECHNOLOGY FRIDAY GAMES SESSION</h1>
+
+    <section id="app">
+        <div id="main-container" class="main-container">
+            <div class="question-container" id="question-container">
+                <p id="reference-question" class="reference-number"></p>
+                <img id="question" src="" alt="Image N°1">
+                <video controls width="700" height="350" poster="./assets/images/home-page-bg.jpg" id="video">
+                    <source src="./assets/videos/bolton.webm" type="video/webm">
+                    <p>Votre navigateur ne supporte pas HTML Video. Mettez à jour votre navigateur.</p>
+                </video>
+            </div>
+            <div id="button-container" class="button-container">
+                <p class="button-next">
+                    <button type="button" onclick="next()" id="next">Suivant</button>
+                </p>
+                <p class="button-reponse">
+                    <button type="button-response" onclick="displayAnswer()" id="answer-button">Reponse</button>
+                </p>
+            </div>
+        </div>
+
+        <aside id="aside-container">
+            <div id="chrono">
+            </div>
+            <p id="timeover-message">Terminé !</p>
+            <div id="answer-container">
+                <span id="answer-text" class="answer-text"></span>
+            </div>
+        </aside>
+    </section>
+
+    <script src="js/quatre-images-un-mot.js"></script>
+</body>
+
+</html>

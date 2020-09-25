@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/guess-the-song.css" />
+  <title>Technology Friday Games Session</title>
+</head>
+
+<body>
+  <div class="player">
+    <div class="container">
+      <div class="icons">
+        <a href="#"><i class="fa fa-bars"></i></a>
+        <h1>Y'ELLO</h1>
+        <a href="#"><i class="far fa-heart"></i></a>
+      </div>
+
+      <div class="player-cover">
+        <img src="assets/images/player-cover.jpg" alt="" />
+      </div>
+
+      <div class="title">
+        <h2>GUESS THE SONG</h2>
+        <p>Artiste(s) + Titre</p>
+        <p>Artist(s) + Song Title</p>
+      </div>
+
+      <div class="song-number"><span id="song-number"></span></div>
+
+      <div class="seek">
+        <div class="fill"></div>
+      </div>
+    </div>
+
+    <div class="audio-buttons">
+      <div class="play-buttons">
+        <a href="#" onclick="previousAudio()"><i class="fa fa-backward"></i></a>
+        <a href="#" class="play-pause" onclick="togglePlayPauseMainPlayer()"><i class="fa fa-play"></i></a>
+        <a href="#" onclick="nextAudio()"><i class="fa fa-forward"></i></a>
+      </div>
+      <div class="repeat-buttons">
+        <a href="#"><i class="fa fa-retweet"></i></a>
+        <span>
+          <button class="decrease" onclick="decreaseVolume()">-</button>
+          <a href="#" class="volume-up"><i class="fa fa-volume-up"></i></a>
+          <button class="increase" onclick="increaseVolume()">+</button>
+        </span>
+        <a href="#" onclick="displayAnswer()"><i class="fa fa-question"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="main-container">
+    <div class="video-container">
+      <video controls width="700" height="350" poster="/assets/images/home-page-bg.jpg" id="video">
+        <source src="/assets/videos/romuald_abouta.webm" type="video/webm">
+        <p>Votre navigateur ne supporte pas HTML Video. Mettez à jour votre navigateur.</p>
+      </video>
+    </div>
+
+    <div id="button-container" class="button-container">
+      <p class="button-next">
+        <button type="button" onclick="continueAfterTheBreak()" id="button-next">Poursuivre le jeu</button>
+      </p>
+    </div>
+  </div>
+
+  <aside id="aside-container">
+    <div id="aside-player" class="aside-play-buttons">
+      <a href="#" class="aside-play-pause" onclick="togglePlayPauseAsidePlayer()"><i class="fa fa-play"></i></a>
+    </div>
+    <div id="answer-container">
+      <p id="answer-artist"></p>
+      <p id="answer-title"></p>
+    </div>
+  </aside>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+
+  <script src="js/guess-the-song.js"></script>
+</body>
+
+</html>

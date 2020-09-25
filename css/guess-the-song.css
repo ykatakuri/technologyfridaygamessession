@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 100vh;
+  background: url('/assets/images/Marshmello.jpg') no-repeat center center/cover;
+}
+
+img {
+  max-width: 100%;
+}
+
+.player {
+  background: rgba(255, 255, 255, 0.1);
+  width: 450px;
+  height: 730px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.5), -3px -3px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.icons h1{
+  color: #f39c12;
+}
+
+.icons a {
+  color:#fff;
+  font-size: 1.2em;
+  transition: all 0.3s;
+}
+
+.icons a:hover {
+  color: #ff012f;
+}
+
+.player-cover{
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.player-cover img{
+  margin: 30px 0 0 75px;
+  width: 60%;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.player-cover img:hover{
+  box-shadow: 3px 3px 50px  #ff012f, -3px -3px 50px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.title h2 {
+  font-size: 2em;
+  margin: 0 0 10px 0;
+  color: #ecf0f1;
+}
+
+.title p {
+  color: #fff;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.song-number {
+  text-align: center;
+  margin: 15px 0;
+  color: #fff;
+}
+
+.seek {
+  width: 100%;
+  height: 5px;
+  background:#000;
+  border-radius: 50px;
+}
+.seek .fill {
+  width: 0;
+  height: 5px;
+  background: #fff;
+  border-radius: 50px;
+}
+
+.audio-buttons {
+  background:#fff;
+  margin: 40px auto;
+  height: 350px;
+  width: 100%;
+  border-radius: 48%;
+  text-align: center;
+}
+
+.audio-buttons a:hover {
+  color: #ff012f;
+}
+
+.play-buttons {
+  padding: 45px 0 30px 0;
+}
+
+.play-buttons a {
+  color: #000;
+  margin: 0 30px;
+  font-size: 1.5em;
+  transition: all 0.5;
+}
+
+.play-buttons .play-pause {
+  background: #0d47a1;
+  padding: 30px 30px 30px 33px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 50px #111;
+  color: #fff;
+}
+
+.aside-play-buttons {
+  padding: 45px 0 30px 0;
+  visibility: visible;
+}
+
+.aside-play-buttons a {
+  color: #fff;
+  margin: 0 30px;
+  font-size: 1.5em;
+  transition: all 0.5;
+}
+
+.aside-play-buttons .aside-play-pause {
+  background: #fff;
+  padding: 30px 30px 30px 33px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 50px #111;
+  color: #000;
+}
+
+.repeat-buttons {
+  margin: 30px 0;
+}
+
+.repeat-buttons a {
+  color: #000;
+  margin: 0 40px;
+  font-size: 1.3em;
+}
+
+.repeat-buttons button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 1px 1px 25px #111;
+  transition: all 0.3s;
+}
+
+.repeat-buttons button:hover {
+  background:  #ff012f;
+  color: #fff;
+}
+
+.increase, .decrease{
+  background-color: #000;
+}
+
+#main-container{
+  height:500px;
+  width:800px;
+  background-color:#fc0;
+  margin-left: 150px;
+  margin-top: 80px;
+  border-radius:8px;
+  padding:30px;
+  visibility: hidden;
+}
+
+#main-container .video-container{
+  padding:10px;
+  background-color:#fc0;
+  border-radius:8px;
+  color:#000;
+  font-size:16px;
+  font-family:"Dayrom",Arial,sans-serif;
+  float:left;
+  width:100%;
+  height:380px
+}
+
+video{border-radius:10px;visibility:hidden}
+
+#aside-container{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+  width:500px;
+  height:400px;
+  position: relative;
+  margin-top: 2%;
+  margin-right: 80px;
+  visibility: visible;
+}
+
+#answer-container{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width:500px;
+  height:auto;
+  padding:15px;
+  background-color:#fff;
+  border:2px solid black;
+  border-radius:8px;
+  flex-wrap:wrap;
+  color:#000;
+  visibility: hidden;
+}
+
+#answer-artist, #answer-title{
+  font-family:"Cambria","Arial",sans-serif;
+  font-size:20px;
+  font-weight:bold;
+  visibility: hidden;
+}
+
+#button-container{
+  display:flex;
+  justify-content:space-between;
+  float:left;
+  width:100%;
+  padding-top:20px;
+  visibility:hidden;
+}
+
+#button-container .button-next{width:35%;float:left}
+
+#button-container .button-next button{
+  padding:15px 50px;
+  color:white;
+  background-color:#0d47a1;
+  border:none;
+  border-radius:8px;
+  font-size:15px;
+  cursor:pointer;
+  box-shadow:0 3px 0px #0d47a1;
+  outline:none
+}
+
+#button-container .button-next button:active{box-shadow:0 3px 0px transparent}
