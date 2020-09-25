@@ -76,10 +76,10 @@ function togglePlayPauseAsidePlayer() {
   }
 
   mainPlayer.addEventListener("timeupdate", function() {
-    let position = audio.currentTime / audio.duration;
+    let position = mainPlayer.currentTime / mainPlayer.duration;
   fillbar.style.width = position * 100 + "%";
 
-  convertTime(Math.round(audio.currentTime));
+  convertTime(Math.round(mainPlayer.currentTime));
 
     if (mainPlayer.ended) {
       mainPlayer.paused;
