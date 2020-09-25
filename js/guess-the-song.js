@@ -13,28 +13,28 @@ let currentSong = 0;
 window.onload = playSong;
 
 function playSong() {
-    if (currentSong === 15) {
-      document.querySelector(".player").style.display = "none";
-      changeElementVisibility(document.getElementById("aside-container"), "hidden");
-      changeElementVisibility(document.querySelector(".aside-play-buttons"), "hidden");
-      changeElementVisibility(document.getElementById("main-container"), "visible");
-      changeElementVisibility(document.getElementById("video"), "visible");
-      changeElementVisibility(document.getElementById("button-container"), "visible");
-    } else if (currentSong > 30) {
-      mainPlayer.pause();
-      asidePlayer.pause();
-      document.querySelector(".player").style.display = "none";
-      changeElementVisibility(document.getElementById("aside-container"), "hidden");
-      changeElementVisibility(document.querySelector(".aside-play-buttons"), "hidden");
-      changeElementVisibility(document.getElementById("main-container"), "visible");
-      changeElementVisibility(document.getElementById("video"), "visible");
-      changeElementVisibility(document.getElementById("button-container"), "visible");
-      document.getElementById("video").src = "./assets/videos/magic-system.webm";
-      document.getElementById("button-next").textContent = "Retour";
-      document.getElementById("button-next").setAttribute("onclick", "displayMenu()");
-    }
-    
-    fetch('https://mtn-gaming.herokuapp.com/guessTheSong')
+  if (currentSong === 15) {
+    document.querySelector(".player").style.display = "none";
+    changeElementVisibility(document.getElementById("aside-container"), "hidden");
+    changeElementVisibility(document.querySelector(".aside-play-buttons"), "hidden");
+    changeElementVisibility(document.getElementById("main-container"), "visible");
+    changeElementVisibility(document.getElementById("video"), "visible");
+    changeElementVisibility(document.getElementById("button-container"), "visible");
+  } else if (currentSong > 30) {
+    mainPlayer.pause();
+    asidePlayer.pause();
+    document.querySelector(".player").style.display = "none";
+    changeElementVisibility(document.getElementById("aside-container"), "hidden");
+    changeElementVisibility(document.querySelector(".aside-play-buttons"), "hidden");
+    changeElementVisibility(document.getElementById("main-container"), "visible");
+    changeElementVisibility(document.getElementById("video"), "visible");
+    changeElementVisibility(document.getElementById("button-container"), "visible");
+    document.getElementById("video").src = "./assets/videos/magic-system.webm";
+    document.getElementById("button-next").textContent = "Retour";
+    document.getElementById("button-next").setAttribute("onclick", "displayMenu()");
+  }
+
+  fetch('https://mtn-gaming.herokuapp.com/guessTheSong')
     .then(response => response.json())
     .then(data => {
       changeElementVisibility(document.getElementById("aside-container"), "visible");
@@ -64,32 +64,32 @@ function togglePlayPauseMainPlayer() {
 
 function togglePlayPauseAsidePlayer() {
   let playButton = document.querySelector(".aside-play-pause");
-    if (asidePlayer.paused) {
-      asidePlayer.play();
-      playButton.innerHTML = '<i class="fa fa-pause"></i>';
-      playButton.style.paddingLeft = "30px";
-    } else {
-      asidePlayer.pause();
-      playButton.innerHTML = '<i class="fa fa-play"></i>';
-      playButton.style.paddingLeft = "33px";
-    }
+  if (asidePlayer.paused) {
+    asidePlayer.play();
+    playButton.innerHTML = '<i class="fa fa-pause"></i>';
+    playButton.style.paddingLeft = "30px";
+  } else {
+    asidePlayer.pause();
+    playButton.innerHTML = '<i class="fa fa-play"></i>';
+    playButton.style.paddingLeft = "33px";
   }
+}
 
-  mainPlayer.addEventListener("timeupdate", function() {
-    let position = mainPlayer.currentTime / mainPlayer.duration;
+mainPlayer.addEventListener("timeupdate", function () {
+  let position = mainPlayer.currentTime / mainPlayer.duration;
   fillbar.style.width = position * 100 + "%";
 
   convertTime(Math.round(mainPlayer.currentTime));
 
-    if (mainPlayer.ended) {
-      mainPlayer.paused;
-    }
-  });
-
-  function convertTime(seconds) {
-    let min = Math.floor(seconds / 60);
-    let sec = seconds % 60;
+  if (mainPlayer.ended) {
+    mainPlayer.paused;
   }
+});
+
+function convertTime(seconds) {
+  let min = Math.floor(seconds / 60);
+  let sec = seconds % 60;
+}
 
 function nextAudio() {
   currentSong++;
@@ -98,8 +98,8 @@ function nextAudio() {
   playButton.innerHTML = '<i class="fa fa-pause"></i>';
   playButton.style.paddingLeft = "30px";
   changeElementVisibility(document.getElementById("answer-container"), "hidden");
-    changeElementVisibility(document.getElementById("answer-artist"), "hidden");
-    changeElementVisibility(document.getElementById("answer-title"), "hidden");
+  changeElementVisibility(document.getElementById("answer-artist"), "hidden");
+  changeElementVisibility(document.getElementById("answer-title"), "hidden");
 }
 
 function previousAudio() {
@@ -107,12 +107,12 @@ function previousAudio() {
   fetch('https://mtn-gaming.herokuapp.com/guessTheSong')
     .then(response => response.json())
     .then(data => {
-        if (currentSong < 0) {
-            currentSong = data.length - 1;
-          }
+      if (currentSong < 0) {
+        currentSong = data.length - 1;
+      }
     })
     .catch(error => console.log(error));
-  
+
   playSong();
   playButton = document.querySelector(".play-pause");
   playButton.innerHTML = '<i class="fa fa-pause"></i>';
@@ -128,7 +128,7 @@ function increaseVolume() {
 }
 
 let volumeUp = document.querySelector(".volume-up");
-volumeUp.addEventListener("click", function() {
+volumeUp.addEventListener("click", function () {
   if (mainPlayer.volume === 1) {
     mainPlayer.volume = 0;
     document.querySelector(".volume-up i").className = "fa fa-volume-mute";
@@ -149,7 +149,7 @@ function continueAfterTheBreak() {
 }
 
 function displayMenu() {
-    window.location.replace("games.html");
+  window.location.replace("games.html");
 }
 
 function displayAnswer() {
