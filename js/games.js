@@ -20,7 +20,9 @@ function going() { // Action effectuer quand l'utilisateur clique sur le bouton 
                         <li id="funpicturegame" onclick="play4Images1Mot()">4 IMAGES 1 MOT</li>
                         <li id="enigmes" onclick="playEnigmes()">ENIGMES</li>
                         <li id="thelargestword" onclick="playMotLePlusLong()">MOT LE PLUS LONG</li>
-                        <li id="guessthesong" onclick="playGuessTheSong()">GUESS THE SONG</li>`;
+                        <li id="guessthesong" onclick="playGuessTheSong()">GUESS THE SONG</li>
+                        <li id="whoisit" onclick="playWhoIsIt()">WHO IS IT</li>
+                    `;
     divMenusElt.appendChild(ulElt);
 
     document.getElementById("button-container").style.visibility = "hidden";
@@ -52,4 +54,8 @@ function playMotLePlusLong() {
 
 function playGuessTheSong() {
     window.location.replace("guessthesong.html");
+}
+
+function playWhoIsIt() {
+    window.location.replace("whoisit.html");
 }
