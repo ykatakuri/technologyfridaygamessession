@@ -47,7 +47,7 @@ function displayQuestion(i) {
                 changeElementVisibility(document.getElementById("aside-container"), "visible");
                 document.getElementById("question").style.display = "none";
                 changeElementVisibility(document.getElementById("video"), "visible");
-                document.getElementById("video").src = "./assets/videos/magic-system.webm";
+                document.getElementById("video").src = "./assets/videos/khaled.webm";
                 document.getElementById("reference-question").innerHTML = "";
                 document.getElementById("indication-question").style.display = "none";
                 changeElementVisibility(document.getElementById("button-container"), "hidden");
