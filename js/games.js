@@ -2,7 +2,7 @@ function goToIndex() {
     window.location.replace("index.html");
 }
 
-function going() { // Action effectuer quand l'utilisateur clique sur le bouton continuer
+function going() {
     document.getElementById("intro-text").innerHTML = `<strong>Débuter une partie.</strong><br /><br />
     Cliquez sur la catégorie de votre choix pour débuter la partie. 
     Vous disposerai de <em><strong>20 secondes</strong></em> ou de <em><strong>30 secondes</strong></em> pour répondre à chacune des questions selon la catégorie choisie.`;
@@ -22,6 +22,7 @@ function going() { // Action effectuer quand l'utilisateur clique sur le bouton 
                         <li id="thelargestword" onclick="playMotLePlusLong()">MOT LE PLUS LONG</li>
                         <li id="guessthesong" onclick="playGuessTheSong()">GUESS THE SONG</li>
                         <li id="whoisit" onclick="playWhoIsIt()">WHO IS IT</li>
+                        <li id="whoisit" onclick="playEnigmesCreatives()">ENIGMES CREATIVES</li>
                     `;
     divMenusElt.appendChild(ulElt);
 
@@ -58,4 +59,8 @@ function playGuessTheSong() {
 
 function playWhoIsIt() {
     window.location.replace("whoisit.html");
+}
+
+function playEnigmesCreatives() {
+    window.location.replace("enigmescreatives.html");
 }

@@ -6,16 +6,14 @@ function goToIndex() {
     window.location.replace("index.html");
 }
 
-function changeElementVisibility(element, visibilityState) { // Changer l'état de visibilité d'un élement
+function changeElementVisibility(element, visibilityState) {
     element.style.visibility = visibilityState;
 }
 
-let index = 0; // index pour récupérer la premiere question de l'api
+let index = 0;
 
-// Afficher la question suivant l'indice courant
 function displayQuestion(i) {
-    i = index; // Assignation de la variable index au parametre i de la fonction
-    // Récuperation des données de l'api
+    i = index;
     fetch('https://mtn-gaming.herokuapp.com/enigmes')
         .then(response => response.json())
         .then(data => {
@@ -179,15 +177,15 @@ function loadPage() {
 
 loadPage();
 
-function next() { // Action a effectué au clique sur le bouton Suivant
-    index++; // on incremente la variable pour afficher la question suivante
+function next() {
+    index++;
     loadPage();
     changeElementVisibility(document.getElementById("timeover-message"), "hidden");
     changeElementVisibility(document.getElementById('answer-button'), "hidden");
     document.getElementById("chrono").innerHTML = "";
 }
 
-function displayMenu() { // Retourner au menu d'accueil
+function displayMenu() {
     window.location.replace("games.html");
 }
 
