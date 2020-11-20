@@ -23,6 +23,7 @@ function going() {
                         <li id="guessthesong" onclick="playGuessTheSong()">GUESS THE SONG</li>
                         <li id="whoisit" onclick="playWhoIsIt()">WHO IS IT</li>
                         <li id="whoisit" onclick="playEnigmesCreatives()">ENIGMES CREATIVES</li>
+                        <li id="whoisit" onclick="playFindTheLogoName()">FIND THE LOGO NAME</li>
                     `;
     divMenusElt.appendChild(ulElt);
 
@@ -63,4 +64,8 @@ function playWhoIsIt() {
 
 function playEnigmesCreatives() {
     window.location.replace("enigmescreatives.html");
+}
+
+function playFindTheLogoName() {
+    window.location.replace("findthelogoname.html");
 }
