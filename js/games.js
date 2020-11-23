@@ -17,13 +17,14 @@ function going() {
     ulElt.innerHTML = ` <li id="funbraindesertgame" onclick="playFunBrainDesertGame()">FUN BRAIN TEASER GAME</li>
                         <li id="funquizgame" onclick="playFunQuizGame()">FUN QUIZ GAME</li>
                         <li id="funpicturegame" onclick="playFunPictureGame()">FUN PICTURE GAME</li>
-                        <li id="funpicturegame" onclick="play4Images1Mot()">4 IMAGES 1 MOT</li>
+                        <li id="quatreimageunmot" onclick="play4Images1Mot()">4 IMAGES 1 MOT</li>
                         <li id="enigmes" onclick="playEnigmes()">ENIGMES</li>
                         <li id="thelargestword" onclick="playMotLePlusLong()">MOT LE PLUS LONG</li>
                         <li id="guessthesong" onclick="playGuessTheSong()">GUESS THE SONG</li>
                         <li id="whoisit" onclick="playWhoIsIt()">WHO IS IT</li>
-                        <li id="whoisit" onclick="playEnigmesCreatives()">ENIGMES CREATIVES</li>
-                        <li id="whoisit" onclick="playFindTheLogoName()">FIND THE LOGO NAME</li>
+                        <li id="enigmescreatives" onclick="playEnigmesCreatives()">ENIGMES CREATIVES</li>
+                        <li id="findthelogoname" onclick="playFindTheLogoName()">FIND THE LOGO NAME</li>
+                        <li id="flagsgame" onclick="playFlagsGame()">FLAGS</li>
                     `;
     divMenusElt.appendChild(ulElt);
 
@@ -68,4 +69,8 @@ function playEnigmesCreatives() {
 
 function playFindTheLogoName() {
     window.location.replace("findthelogoname.html");
+}
+
+function playFlagsGame() {
+    window.location.replace("flags.html");
 }
